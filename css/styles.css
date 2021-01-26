@@ -1,0 +1,216 @@
+* {
+    font-family: 'Heebo', sans-serif;
+  }
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-one{
+    display: flex;
+    margin: 1.5vw;
+}
+.container-two{
+    display: flex;
+    margin: 1.5vw;
+    
+}
+.flexy {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: stretch;
+}
+.entry {
+    background-color: black;
+    color: white;
+    width: 21vw;
+    height: 5vw;
+    margin: 1vh 2vw;
+    font-size: 3vw;
+    text-align: right;   
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow-y: hidden; 
+}
+.font-medium {
+    font-size: 1.5vw;
+    color: grey;
+}
+.font-small {
+    height: 3vw;
+    font-size: 1vw;
+    color: grey;
+}
+
+.calc-container {
+    width: 25.5vw;
+    background-color: rgb(0, 0, 0);
+    padding-bottom: 2.8vh;
+    padding-top: 1.85vh;
+}
+.numBtn{
+    background-color: black;
+    color: white;
+    font-size: 1.8vw;
+    height: 4vw;
+    width: 3vw;
+    margin: 0.5vh 1.5vw;
+    border: 0;    
+}
+.clearBtn {
+    background-color: black;
+    color: rgb(229,109,59);
+    font-size: 1.5vw;
+    height: 4vw;
+    width: 3vw;
+    margin: 0.5vh 1.5vw;
+    border: 0 
+   
+}
+.mathBtn {
+    background-color: black;
+    color: rgb(229,109,59);
+    font-size: 2.1vw;
+    height: 4vw;
+    width: 3vw;
+    margin: 0.5vh 1.5vw;
+    border: 0;
+}
+.percent{
+    font-size: 1.5vw;
+}
+
+.equalBtn {
+    background-color: rgb(255,114,53);
+    color: white;
+    font-size: 2.1vw;
+    height: 4vw;;
+    width: 4vw;
+    margin: 0.5vh 1.25vw;
+    border-radius: 50%;
+    border: 0;      
+
+}
+
+.fas {
+    color: rgb(229,109,59);
+    font-size: 1.3021vw; 
+}
+
+.RUS-btn {
+    background-color: white;
+    color: black;
+    font-size: 1vw;
+    height: 2vw;
+    width: 3vw;
+    margin: 0.5vh 1.5vw;
+}
+
+.RUS-btnEqual {
+    background-color: white;
+    color: black;
+    font-size: 1vw;
+    height: 2vw;
+    width: 21vw;
+    margin: 0.5vh 1.5vw;
+}
+
+.RUS-btn:hover{background-color:rgb(224, 224, 224);}
+.RUS-btnEqual:hover{background-color:rgb(224, 224, 224);}
+
+
+.calc-container-Rus {
+    width: 25vw;
+    height: 60%;
+    background-color: white;
+    padding-bottom: 2.8vh;
+    padding-top: 1.85vh;
+    margin-right: 3vw;
+    border: 3px solid black;
+}
+
+.calc-container-Rus__description {
+    margin-top: -20px;
+}
+
+.entry-Rus {
+    background-color: white;
+    color: black;
+    width: 20vw;
+    height: 5vw;
+    margin: 1vh 2vw;
+    font-size: 3vw;
+    text-align: right;   
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow-y: hidden; 
+    border: 1px solid black;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+h2 {
+    border: 1px solid black;
+    background: white;
+    text-align: center;
+    margin-top: 0;
+}
+@media (max-width: 1100px) {
+    .calc-container{
+        width: 27vw;
+    }
+
+    .entry {
+        width: 23vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .calc-container{
+        width: 30vw;
+    }
+    .entry {
+        width: 25vw;
+    }
+}
+
+
+  
+.btn--canv {
+    position: fixed;
+    top: 0.5vh;
+    right: 0.5vw;
+	background: none;
+	color: inherit;
+	font-size: 1vw;
+    border: none;
+    pointer-events: visible;
+    color: grey;
+}
+
+#canv {
+    margin: 0;
+    z-index:-1;
+    position: fixed;
+    height: 100vh;
+}
+
+.back {
+    position: fixed;
+    top: 0.4vh;
+    left: 0.4vw;
+	font-size: 1vw;
+    pointer-events: visible;
+    color: black;
+}

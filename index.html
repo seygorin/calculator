@@ -1,0 +1,125 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">        
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <title>JavaScript Calculator</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo">
+    </head>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/canvg/3.0.6/umd.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.28.0/js/canvas-to-blob.min.js"></script>
+
+    <body>
+        
+    <header class="back">
+        <a href="https://seygorin.github.io/index.html">&#8592; Go back</a>
+    </header>  
+
+    <div>
+        <button id="roll-button" class="btn--canv">background <br>roll</button>
+    </div>
+
+    <div class="container">
+
+        <div class="container-one">
+
+            <div class="calc-container">
+                 <div>
+                    <div>
+						<p id="history-compute" class="entry font-small"></p>
+					</div>
+					<div id="">
+						<p id="history-result" class="entry font-small"></p>
+                    </div>
+                    <div id="">
+						<p id="compute" class="entry font-medium"></p>
+                    </div>
+                    <div id="">
+						<p id="entry" class="entry">0</p>
+                    </div>
+                </div>
+ 
+                <div>
+                    <button id="clearBtn" type="button" class="clearBtn" onclick="clearBtnPress()">AC</button>
+                    <button type="button" class="clearBtn fas fa-backspace" onclick="clearBtnPressOnce()"></button>
+                    <button id="percent" type="button" class="mathBtn percent" onclick="mathBtnPress('%')">%</button>
+                    <button id="mathBtn" type="button" class="mathBtn" onclick="mathBtnPress('÷')">÷</button>
+
+                    <button id="numBtn" type="button" class="numBtn" onclick="numBtnPress(7)">7</button>
+                    <button id="numBtn" type="button" class="numBtn" onclick="numBtnPress(8)">8</button>
+                    <button id="numBtn" type="button" class="numBtn" onclick="numBtnPress(9)">9</button>
+                    <button id="mathBtn" type="button" class="mathBtn" onclick="mathBtnPress('×')">×</button>
+  
+                    <button id="numBtn" type="button" class="numBtn" onclick="numBtnPress(4)">4</button>
+                    <button id="numBtn" type="button" class="numBtn" onclick="numBtnPress(5)">5</button>
+                    <button id="numBtn" type="button" class="numBtn" onclick="numBtnPress(6)">6</button>
+                    <button id="mathBtn" type="button" class="mathBtn" onclick="mathBtnPress('-')">-</button>
+
+                    <button id="numBtn" type="button" class="numBtn" onclick="numBtnPress(1)">1</button>
+                    <button id="numBtn" type="button" class="numBtn" onclick="numBtnPress(2)">2</button>
+                    <button id="numBtn" type="button" class="numBtn" onclick="numBtnPress(3)">3</button>
+                    <button id="mathBtn" type="button" class="mathBtn" onclick="mathBtnPress('+')">+</button>
+
+                    <button id="YES" type="button" class="mathBtn fas fa-sync" onclick="return soon();" value="Soon!"></button>
+                    <button id="numBtn" type="button" class="numBtn" onclick="numBtnPress(0)">0</button>
+                    <button type="button" class="numBtn" onclick="numBtnPress('.')">.</button>
+                    <button type="button" class="equalBtn" onclick="equalBtnPress()">=</button>
+                </div>
+        
+            </div>
+
+        </div>
+
+        <div class="container-two">
+
+            <div class="calc-container-Rus">
+                 <div>
+                    <div id="">
+						<p id="compute-Rus" class="entry-Rus font-medium"></p>
+                    </div>
+                    <div id="">
+						<p id="entry-Rus" class="entry-Rus">0</p>
+                    </div>
+                </div>
+ 
+                <div class=flexy>
+                    <button id="clearBtn-Rus" type="button" class="RUS-btn" onclick="clearBtnPressRus()">AC</button>
+                    <button id="clearBtn-Rus" type="button" class="RUS-btn fas fa-backspace" onclick="clearBtnPressOnceRus()"></button>
+                    <button id="numBtn" type="button" class="RUS-btn" onclick="numBtnPressRus(0)">0</button>
+                    <button id="numBtn" type="button" class="RUS-btn" onclick="numBtnPressRus(1)">1</button>
+                    <button id="numBtn" type="button" class="RUS-btn" onclick="numBtnPressRus(2)">2</button>
+                    <button id="numBtn" type="button" class="RUS-btn" onclick="numBtnPressRus(3)">3</button>
+                    <button id="numBtn" type="button" class="RUS-btn" onclick="numBtnPressRus(4)">4</button>
+                    <button id="numBtn" type="button" class="RUS-btn" onclick="numBtnPressRus(5)">5</button>
+                    <button id="numBtn" type="button" class="RUS-btn" onclick="numBtnPressRus(6)">6</button>
+                    <button id="numBtn" type="button" class="RUS-btn" onclick="numBtnPressRus(7)">7</button>
+                    <button id="numBtn" type="button" class="RUS-btn" onclick="numBtnPressRus(8)">8</button>
+                    <button id="numBtn" type="button" class="RUS-btn" onclick="numBtnPressRus(9)">9</button>
+
+                    <button id="mathBtn" type="button" class="RUS-btn" onclick="mathBtnPressRus('x')">×</button>
+                    <button id="mathBtn" type="button" class="RUS-btn" onclick="mathBtnPressRus('-')">-</button>
+                    <button id="mathBtn" type="button" class="RUS-btn" onclick="mathBtnPressRus('+')">+</button>
+                    <button type="button" class="RUS-btn" onclick="numBtnPressRus('.')">.</button>
+                    <button type="button" class="RUS-btnEqual" onclick="equalBtnPressRus()">=</button>
+                </div>
+
+            </div>
+
+            <div>
+                <h2>Счёт РУСов</h2>
+                <a href="http://vserod.com/posts/metodika-ponimaniya-svyazi-grammatiki-i-matematiki/" target="_blank">
+                    <img alt="RUS's math" src="http://vserod.com/img/table-2.png" >
+                </a>
+            </div>
+        </div>
+        <canvas id="canv"></canvas>
+    </div>
+
+        <script src="js/scripts.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    </body>
+
+</html>
